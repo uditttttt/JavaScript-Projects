@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Finder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Recipe Finder</h1>
+      <h1>Recipe Finder</h1>
     </header>
-    
-    <main>
-        <section class="search-section">
-            <form id="search-form">
-                <input type="text" id="search-input" placeholder="Search for recipes (e.g., chicken)" size="35" required>
-                <button type="submit">Search</button>
-            </form>
-        </section>
 
-        <section class="results-section">
-            <div id="results-container">
-                </div>
-            <p id="loader" class="hidden">Loading...</p>
-        </section>
+    <main>
+      <section class="search-section">
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for recipes (e.g., chicken)"
+            size="35"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="results-section">
+        <div id="results-container"></div>
+        <p id="loader" class="hidden">Loading...</p>
+      </section>
     </main>
-    
+
     <script src="script.js"></script>
-</body>
+
+    <div id="recipe-modal" class="modal-container hidden">
+      <div class="modal-content">
+        <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+    
+  </body>
 </html>
